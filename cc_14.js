@@ -30,3 +30,13 @@ ticket.appendChild(ticketName);
     const ticketContainer = document.getElementById('ticketContainer');
     ticketContainer.appendChild(ticket);
 }
+// Task 3 
+function highlightHighPriorityTickets() {
+  const highPriorityTickets = document.querySelectorAll('.ticket.High');
+  cosnt ticketsArray = Array.from(highPriorityTickets);
+
+ticketsArray.forEach(ticket => {
+  ticket.style.backgroundColor = '
+    ticket.style.border = '2px solid red';
+});
+}
