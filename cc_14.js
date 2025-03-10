@@ -36,7 +36,23 @@ function highlightHighPriorityTickets() {
   cosnt ticketsArray = Array.from(highPriorityTickets);
 
 ticketsArray.forEach(ticket => {
-  ticket.style.backgroundColor = '
-    ticket.style.border = '2px solid red';
+  ticket.style.backgroundColor = 'rbg(157, 174, 191);
+    ticket.style.border = '2px solid blue';
 });
 }
+// task 3 
+function setupEventListeners () {
+  const ticketContainer = document.getElementById('ticketContainer');
+
+ticketContainer.addEventListeners('click', (event) => {
+  if(event.target.tagName === 'BUTTON' && event.ticket.textContent === 'Resolve') {
+    const ticket = event.target.closest('.ticket');
+    ticket.remove():
+  }
+
+  consol.log('A ticket was clicked!');
+  event.stopPropagation();
+});
+}
+
+document.addEventListener('DOMContenetLoaded', setupEventListeners);
